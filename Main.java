@@ -6,6 +6,7 @@ import java.sql.SQLOutput;
 import java.util.*;
 
 import static java.lang.Math.sqrt;
+import static javafx.scene.input.KeyCode.*;
 
 public class Main {
 
@@ -13,11 +14,11 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("hello world");
+       /*  System.out.println("hello world");
         System.out.print("hello world");
         System.out.println("hello world");
 
-   /*     //---------------------------------------------DATA TYPES---------------------------------------------
+       //---------------------------------------------DATA TYPES---------------------------------------------
 
         int a = 10;
         char b = 'a';
@@ -209,24 +210,28 @@ public class Main {
         System.out.println("lcm of the numbers is:");
         int lcm = n1*n2/hcf;
         System.out.println(lcm);
-    */
 
+
+
+        //---------------------------------------------CONTINUUS ADDITION UNTIL 00 IS PRESSED---------------------------------------------
 
         int sum1 = 0;
-        int n;
-        System.out.println("enter + operator to add numbers:");
+        int n = 0;
+        System.out.println("enter the numbers to add:");
 
-        while (true) {
-            char op = sc.next().charAt(0);
-            if (op == '+') {
-                n = sc.nextInt();
+        while (n>=0) {
+                System.out.println("enter number to add or press 00 ");
                 sum1 = sum1 + n;
-            } else if (op == 'x' || op == 'X')
+                n = sc.nextInt();
+            if (n == 00)
             {
-                System.out.println(sum1);
+                System.out.println("Output: "+sum1);
                 break;
             }
+
         }
+*/
+
     }
     }
 
