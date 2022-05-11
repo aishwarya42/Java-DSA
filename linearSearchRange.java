@@ -25,7 +25,8 @@ public class linearSearchRange {
       System.out.println("min:"+linearSearchMinrange2(arr,start,end));
 
     }
-
+//.......................LINEAR SEARCH IN A RANGE.......................//
+    
  static int linearSearchrange(int[] arr1, int tar ,int a, int b){
 
         for(int i = a;i<=b;i++){
@@ -42,7 +43,7 @@ public class linearSearchRange {
 
 
 
-
+//.......................LINEAR SEARCH FOR MIN ELEMENT IN A RANGE.......................//
 
     static int linearSearchMinrange2(int[] arr1,int a, int b){
         int min=arr1[a];
@@ -56,6 +57,7 @@ public class linearSearchRange {
         return min;
     }
 
+    //.......................LINEAR SEARCH FOR MAX ELEMENT IN A RANGE RETURNING THE ELEMENT.......................//
     static int linearSearchMaxrange2(int[] arr1,int a, int b){
         int max = arr1[a];
         for(int i = a;i<=b;i++){
@@ -68,6 +70,8 @@ public class linearSearchRange {
         return max;
     }
 
+    //.......................LINEAR SEARCH FOR MAX ELEMENT IN A RANGE RETURNING THE INDEX.......................//
+    
       static int linearSearchMaxrange1(int[] arr1,int a, int b){
         int max = arr1[a];
         int index = a;
