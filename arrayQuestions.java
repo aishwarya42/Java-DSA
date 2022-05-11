@@ -13,11 +13,11 @@ public class arrayQuestions {
             System.out.print(arr[i]+"("+i+")"+" ");
         }
         System.out.println();
-       //System.out.println("enter the index number to swap:");
-      //a = sc.nextInt();
-     // b = sc.nextInt();
-      //swap(arr, a, b);
-      //System.out.println("swapped array: "+ Arrays.toString(arr));
+       System.out.println("enter the index number to swap:");
+      a = sc.nextInt();
+      b = sc.nextInt();
+      swap(arr, a, b);
+      System.out.println("swapped array: "+ Arrays.toString(arr));
         reverse(arr,0,arr.length);
         System.out.println("reversed array:" + Arrays.toString(arr));
         System.out.print("max value in array:");
@@ -69,7 +69,7 @@ public class arrayQuestions {
         }
         return max;
     }
-
+//.....................MIN RANGE.....................//
     static void minArray(int[] arr){
         int min = maxArray1(arr);
         for(int i=0;i<arr.length;i++){
