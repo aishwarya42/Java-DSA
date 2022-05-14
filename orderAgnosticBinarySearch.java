@@ -4,8 +4,8 @@ public class orderAgnosticBinarySearch {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-    int[] arr = {-20,-12, 22, 34, 43, 67, 74, 88, 90};
-    int tar = 34;
+    int[] arr = {90, 88,76,67,43, 34};
+    int tar = 67;
     int ans = orderagnosticbinary(arr,tar);
         System.out.println("searched element index: "+ ans);
     }
