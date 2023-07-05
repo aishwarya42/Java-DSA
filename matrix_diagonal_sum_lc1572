@@ -1,0 +1,74 @@
+class Solution {
+    public int diagonalSum(int[][] mat) {
+         diagonalsum(mat);
+         return res(mat);
+        
+    }
+
+     public static int diagonalsum(int[][] mat) {
+          boolean [][] b =new boolean[mat.length][mat[0].length];
+        ArrayList<Integer> ll = new ArrayList<>();
+        
+
+        diag(mat,b,0,0,ll);
+           for(int i =0;i<mat.length;i++){
+            reverse(mat[i]);
+        }
+        diag1(mat,b,mat.length-1,mat[0].length-1,ll); 
+        
+        return sum(ll);
+     }
+
+     public static int res(int mat[][]){
+        if (mat.length == 1 && mat[0].length == 1) {
+            return (mat[mat.length - 1][mat[0].length - 1]);
+        }
+        if (mat.length % 2 != 0 && mat[0].length % 2 != 0) {
+            return (diagonalsum(mat) - mat[mat.length / 2][mat[0].length / 2]);
+        } else {
+            return (diagonalsum(mat));
+        }
+    }
+
+    public static int sum(ArrayList<Integer> ll){
+        int s =0;
+        for(int i=0;i<ll.size();i++){
+            s+=ll.get(i);
+        }
+        return s;
+    }
+
+    public static void diag(int[][] mat, boolean[][] b, int r, int c, ArrayList<Integer> ll){
+        if(r>mat.length-1 && c>mat[0].length-1){
+            return;
+        }
+        b[r][c]=true;
+        ll.add(mat[r][c]);
+        diag(mat,b,r+1,c+1,ll);
+        //b[r][c]=false;
+    }
+
+    public static void diag1(int[][] mat, boolean[][] b, int r, int c, ArrayList<Integer> ll){
+        if(r<0 && c<0){
+            return;
+        }
+
+        b[r][c]=true;
+        ll.add(mat[r][c]);
+        diag1(mat,b,r-1,c-1,ll);
+       // b[r][c]=false;
+    }
+
+    public static void reverse(int arr[]){
+        int i=0;
+        int j=arr.length-1;
+        while(i<=j){
+            int temp = arr[i];
+           arr[i]=arr[j];
+            arr[j]=temp;
+            i++;j--;
+        }
+    }
+
+       
+}
